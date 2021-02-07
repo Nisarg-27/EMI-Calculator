@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="top-box">
+        <span class="est">Estimated Payment</span>
+        <p class="pay"><span class="money">&#8377; <span id="ruppes">0</span>/</span>per month</p>
+        <a href="description.html">More Details</a>
+    </div>
+    <div class="inputs">
+        <div class="page">
+            <label class="field field_v1">
+                <input class="field__input" placeholder="e.g. 100000" type="tel" id="total">
+                <span class="field__label-wrap">
+                <span class="field__label">Total Amount</span>
+                </span>
+            </label>
+            <label class="field field_v2">
+                <input class="field__input" placeholder="e.g. 50000" type="tel" id="down_payment">
+                <span class="field__label-wrap">
+                <span class="field__label">Down Payment</span>
+                </span>
+            </label>
+            <label class="field field_v3">
+                <input class="field__input" placeholder="e.g. 2" type="tel" id="year">
+                <span class="field__label-wrap">
+                <span class="field__label">Number of years borrowed for</span>
+                </span>
+            </label>
+        </div>
+        <label for="intrest" class="int">Rate of intrest: <span id="live">10.9</span>%</label>
+        <input type="range" id="intrest" min="0" max="20" step="0.1" value="10.9" onchange="updateTextInput(this.value);">
+
+        <button class="emi" id="emi">Calculate EMI</button>
+    </div>
+</body>
+<script src="javascript/cal.js"></script>
+<script>
+    function updateTextInput(val) {
+        var val = document.getElementById("intrest").value;
+        document.getElementById("live").innerHTML = val;
+    }
+</script>
+
+</html>

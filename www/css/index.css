@@ -1,0 +1,50 @@
+@media(max-width: 500px) {
+    button {
+        outline: none;
+    }
+    .welcome {
+        font-size: 60px;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(60, 67, 78);
+        font-weight: bold;
+        padding: 20px;
+    }
+    .cal {
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(60, 67, 78);
+        padding: 20px;
+        padding-top: 0px;
+        margin-top: 10px;
+        line-height: 30px;
+    }
+    .start {
+        width: 90%;
+        padding: 10px;
+        margin: 0px auto;
+        border-radius: 20px;
+        border: none;
+        background: #AAFFA9;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #11FFBD, #AAFFA9);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #11FFBD, #AAFFA9);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        color: white;
+        font-weight: bolder;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .buuton {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .buuton a {
+        width: 90%;
+        text-decoration: none;
+        border: none;
+        color: white;
+    }
+}

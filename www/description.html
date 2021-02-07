@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Description</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="javascript/cal.js"></script>
+    <link rel="stylesheet" href="css/details.css">
+</head>
+
+<body>
+    <canvas id="myChart" style="width: 100px; height: 100px;"></canvas>
+
+    <div class="inform">
+        <div class="item item--1"><span>Principal Amount</span></div>
+        <div class="item item--2"><span id="Principal">&#8377; 200000</span> </div>
+        <div class="item item--3"><span>Intrest Amount</span></div>
+        <div class="item item--4"><span id="Intrest">&#8377; 200000</span></div>
+        <div class="item item--5"><span>Total Amount</span></div>
+        <div class="item item--6"><span>&#8377; <span id="Total">200000</span></span>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'doughnut',
+
+            // The data for our dataset
+            data: {
+                labels: ['Amout Borrowed', 'Intrest'],
+                datasets: [{
+                    label: 'My First dataset',
+                    data: [localStorage.getItem("loan"), localStorage.getItem("intrest")],
+                    backgroundColor: ['rgba(54, 209, 220, 1)',
+                        'rgba(117, 230, 218, 1)'
+                    ]
+                }]
+            },
+
+            // Configuration options go here
+            options: {}
+        });
+        document.getElementById("Principal").innerHTML = "&#8377; " + localStorage.getItem("loan");
+        document.getElementById("Intrest").innerHTML = "&#8377; " + localStorage.getItem("intrest");
+        document.getElementById("Total").innerHTML = parseInt(localStorage.getItem("loan")) + parseInt(localStorage.getItem("intrest"));
+    </script>
+</body>
+
+</html>

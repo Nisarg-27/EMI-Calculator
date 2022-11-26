@@ -1,4 +1,4 @@
-<h1 align="center"> EMI APP </h1>
+<h1 align="center"> EMI Calculator 💰 </h1>
 
 
 
